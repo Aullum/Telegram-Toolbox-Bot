@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# Pytest / Coverage
+htmlcov/
+.tox/
+.coverage
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Docker
+*.pid
+*.log
+docker-compose.override.yml
+
+# MyPy / Pyright / etc.
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Misc
+*.swp
+.DS_Store
