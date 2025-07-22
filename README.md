@@ -4,6 +4,7 @@
 ![aiogram](https://img.shields.io/badge/aiogram-3.x-blueviolet?logo=telegram)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
+![Poetry](https://img.shields.io/badge/Poetry-dependency--manager-yellow?logo=python)
 
 A multifunctional open-source Telegram bot built with Python and [aiogram](https://github.com/aiogram/aiogram). All tools are accessible via inline buttons and fully customizable through FSM-based dialogs.
 
@@ -11,7 +12,7 @@ A multifunctional open-source Telegram bot built with Python and [aiogram](https
 
 ## 🚀 Deploy in one click
 
-<a href="https://render.com/deploy?repo=https://github.com/Aullum/telegram-toolbox-bot">
+<a href="https://render.com/deploy?repo=https://github.com/Aullum/telegram-gpt-php-translator-bot">
   <img src="https://img.shields.io/badge/Render-000000?logo=render&logoColor=white&style=for-the-badge" alt="Render" style="height: 35px;"/>
 </a>
 
@@ -33,8 +34,9 @@ A multifunctional open-source Telegram bot built with Python and [aiogram](https
 
 - **Python 3.12**
 - **aiogram 3.x** (async FSM-based bot framework)
-- Docker & docker-compose ready
-- Modular architecture (handlers / services / keyboards / states)
+- **Poetry** for dependency & project management
+- **Docker / docker-compose**
+- Modular structure: `handlers / services / keyboards / states`
 
 ---
 
@@ -47,17 +49,18 @@ git clone https://github.com/YOUR_USERNAME/telegram-toolbox-bot.git
 cd telegram-toolbox-bot
 cp .env.example .env  # set your BOT_TOKEN
 
-docker-compose up --build
+docker-compose up --build -d
 ```
 
-### 🧪 Manual (venv)
+### 🧪 Manual (Poetry)
 
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-python main.py
+git clone https://github.com/YOUR_USERNAME/telegram-toolbox-bot.git
+cd telegram-toolbox-bot
+cp .env.example .env  # set your BOT_TOKEN
+
+poetry install
+poetry run python main.py
 ```
 
 ---
@@ -94,10 +97,14 @@ telegram-toolbox-bot/
 │   ├── keyboards/        # Inline UI buttons
 │   └── states.py         # FSM states
 ├── main.py               # Entry point
-├── requirements.txt
+├── pyproject.toml        # Poetry config
+├── poetry.lock           # Locked dependencies
 ├── .env.example
-├── Dockerfile
+├── .dockerignore         # Docker context exclusions
 ├── docker-compose.yml
+├── Dockerfile
+├── render.yaml           # Render deploy config
+├── LICENSE               # MIT license
 └── README.md
 ```
 
