@@ -1,0 +1,23 @@
+[project]
+name = "telegram-toolbox-bot"
+version = "0.1.0"
+description = "A multifunctional open-source Telegram bot with inline tools"
+authors = [
+    {name = "Aullum",email = "roman.zidinov@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "aiogram ==3.21.0",
+    "python-dotenv ==1.1.1",
+    "faker ==37.4.2",
+    "pandas ==2.3.1"
+]
+[tool.poetry]
+package-mode = false
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

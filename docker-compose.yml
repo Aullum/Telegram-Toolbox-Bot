@@ -1,9 +1,6 @@
-version: "3.9"
-
 services:
-  telegram-bot:
+  bot:
     build: .
-    container_name: telegram-toolbox-bot
     env_file:
       - .env
     restart: unless-stopped

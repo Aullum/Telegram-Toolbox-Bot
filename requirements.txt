@@ -1,4 +1,0 @@
-aiogram==3.21.0
-python-dotenv==1.1.1
-Faker==37.4.2
-pandas==2.3.1
