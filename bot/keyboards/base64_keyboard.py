@@ -1,6 +1,7 @@
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import InlineKeyboardMarkup
 
+
 def base64_menu() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
 

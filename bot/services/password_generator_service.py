@@ -1,6 +1,7 @@
 import string
 import secrets
 
+
 def generate_secure_password(length: int, charsets: dict) -> str:
     pool = ""
     if charsets.get("letters"):
@@ -15,4 +16,4 @@ def generate_secure_password(length: int, charsets: dict) -> str:
     if not pool:
         raise ValueError("No character sets selected.")
 
-    return ''.join(secrets.choice(pool) for _ in range(length))
+    return "".join(secrets.choice(pool) for _ in range(length))

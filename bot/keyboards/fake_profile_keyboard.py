@@ -1,5 +1,6 @@
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+
 
 def gender_keyboard() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
@@ -8,6 +9,7 @@ def gender_keyboard() -> InlineKeyboardMarkup:
     builder.button(text="🎲 Random", callback_data="gender:random")
     builder.adjust(2)
     return builder.as_markup()
+
 
 def locale_keyboard() -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
