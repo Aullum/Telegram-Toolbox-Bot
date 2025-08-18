@@ -2,6 +2,7 @@ import pandas as pd
 import json
 import io
 
+
 def convert_json_to_csv(json_bytes: bytes) -> bytes:
     try:
         data = json.loads(json_bytes.decode("utf-8"))

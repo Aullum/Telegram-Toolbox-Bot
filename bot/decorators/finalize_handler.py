@@ -2,6 +2,7 @@ from functools import wraps
 from aiogram.types import CallbackQuery
 from bot.keyboards.common_keyboard import main_menu_keyboard
 
+
 def finalize_handler():
     def decorator(func):
         @wraps(func)
@@ -12,9 +13,10 @@ def finalize_handler():
                 await event.message.answer(
                     "🔧 <b>Choose a tool:</b>",
                     reply_markup=main_menu_keyboard(),
-                    parse_mode="HTML"
+                    parse_mode="HTML",
                 )
             return
 
         return wrapper
+
     return decorator

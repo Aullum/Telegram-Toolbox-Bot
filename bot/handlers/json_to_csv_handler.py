@@ -9,10 +9,12 @@ import os
 
 router = Router()
 
+
 @router.callback_query(F.data == "tool:json2csv")
 async def json_entry(cb: CallbackQuery, state: FSMContext):
     await cb.message.edit_text("📤 Please upload a JSON file (array of objects):")
     await state.set_state(JsonToCsvState.waiting_for_file)
+
 
 @router.message(JsonToCsvState.waiting_for_file, F.document)
 @finalize_handler()
