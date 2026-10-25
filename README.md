@@ -12,7 +12,7 @@ A multifunctional open-source Telegram bot built with Python and [aiogram](https
 
 ## 🚀 Deploy in one click
 
-<a href="https://render.com/deploy?repo=https://github.com/Aullum/telegram-gpt-php-translator-bot">
+<a href="https://render.com/deploy?repo=https://github.com/Aullum/Telegram-Toolbox-Bot">
   <img src="https://img.shields.io/badge/Render-000000?logo=render&logoColor=white&style=for-the-badge" alt="Render" style="height: 35px;"/>
 </a>
 
